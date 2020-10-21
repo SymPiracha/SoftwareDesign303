@@ -14,6 +14,7 @@ public class Deck implements Iterable<Card>
 
 	private final List<Card> aCards = new ArrayList<>();
 	private Undoer aUndoer = new Undoer();
+	
  
 	public static void main(String[] args)
 	{
