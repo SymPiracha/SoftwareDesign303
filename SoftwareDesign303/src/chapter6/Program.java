@@ -45,4 +45,14 @@ public class Program
 		return aShows.get(pDay);
 	}
 	
+	public String toString()
+	{
+		StringBuilder description = new StringBuilder();
+		for (Day day : Day.values() )
+		{
+			description.append(day).append(": ").append(aShows.get(day).description()).append("\n");
+		}
+		return description.toString();
+	}
+	
 }

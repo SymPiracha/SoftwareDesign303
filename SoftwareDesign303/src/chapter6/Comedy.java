@@ -6,9 +6,11 @@ public class Comedy implements Show
 	private int aTime;
 	private String aTitle;
 	
-	public Comedy()
+	public Comedy(String pComedian, String pTitle, int pTime )
 	{
-		//TODO
+		aComedian = pComedian;
+		aTime = pTime;
+		aTitle = pTitle;
 	}
 	@Override
 	public int time() 
