@@ -18,6 +18,11 @@ public class Client
 		program.add(Day.FRIDAY, CHAVEZ);
 		program.add(Day.SATURDAY, CARVE_UP);
 		program.add(Day.SUNDAY, new DoubleBill(GIANT_CLAW, ALLIGATOR));
+		
+		
+		CompositeShow show = new CompositeShow(CHAVEZ, new DoubleBill(GIANT_CLAW, ALLIGATOR));
+		show.time();
+		
 	}
 	
 	
