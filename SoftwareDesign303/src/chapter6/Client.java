@@ -11,17 +11,9 @@ public class Client
 	
 	public static void main(String[] args)
 	{
-		Program program = new Program();
-		
-		program.add(Day.THURSDAY, new CompositeShow(CHAVEZ, GIANT_CLAW));
-		
-		program.add(Day.FRIDAY, CHAVEZ);
-		program.add(Day.SATURDAY, CARVE_UP);
-		program.add(Day.SUNDAY, new DoubleBill(GIANT_CLAW, ALLIGATOR));
-		
-		
-		CompositeShow show = new CompositeShow(CHAVEZ, new DoubleBill(GIANT_CLAW, ALLIGATOR));
-		show.time();
+		IntroducedShow chavezIntro = new IntroducedShow(CHAVEZ, "Ali Hassan", 5);
+		CompositeShow tuesday = new CompositeShow(chavezIntro,CARVE_UP);
+		IntroducedShow wednesday = new IntroducedShow(tuesday, "Martin", 10);
 		
 	}
 	
