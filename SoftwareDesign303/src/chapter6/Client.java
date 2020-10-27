@@ -11,10 +11,19 @@ public class Client
 	
 	public static void main(String[] args)
 	{
-		IntroducedShow monday = new IntroducedShow(CHAVEZ, "Ali Hassan", 5);
-		CompositeShow tuesday = new CompositeShow(monday,CARVE_UP);
-		IntroducedShow wednesday = new IntroducedShow(tuesday, "Martin", 10);
+//		IntroducedShow monday = new IntroducedShow(CHAVEZ, "Ali Hassan", 5);
+//		CompositeShow tuesday = new CompositeShow(monday,CARVE_UP);
+//		IntroducedShow wednesday = new IntroducedShow(tuesday, "Martin", 10);
+//		IntroducedShow defaultShow = new IntroducedShow(
+//				new CompositeShow(
+//						new IntroducedShow(CHAVEZ, "Ali Hassan", 5),
+//						CARVE_UP),"Martin",10);
 		
+		Program program = new Program();
+		System.out.print(program);
+		program.setDefault(CARVE_UP);
+		program.initialize();
+		System.out.print(program);
 	}
 	
 	

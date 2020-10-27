@@ -13,10 +13,6 @@ public class CompositeShow implements Show
 		aShows = Arrays.asList(pShows);
 	}
 
-	public CompositeShow(CompositeShow pCompositeShow)
-	{
-		aShows = new ArrayList<>(pCompositeShow.aShows);
-	}
 	
 	@Override
 	public int time() 

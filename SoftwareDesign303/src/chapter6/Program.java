@@ -6,10 +6,29 @@ public class Program
 {
 	
 	private final EnumMap<Day, Show> aShows = new EnumMap<>(Day.class);
+	private Show aDefault = Show.NULL;
 	
 	public Program()
 	{
 		clear();
+	}
+	
+	public void setDefault(Show pShow)
+	{
+		aDefault = pShow;
+	}
+	
+	public void initialize()
+	{
+		initialize(Day.values());
+	}
+	
+	public void initialize(Day ... pDays)
+	{
+		for (Day day: pDays )
+		{
+			aShows.put(day, aDefault.copy());
+		}
 	}
 	
 	
