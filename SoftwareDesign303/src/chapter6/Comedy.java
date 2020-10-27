@@ -12,6 +12,16 @@ public class Comedy implements Show
 		aTime = pTime;
 		aTitle = pTitle;
 	}
+	
+	//Copy constructor
+	public Comedy (Comedy pComedy)
+	{
+		aComedian = pComedy.aComedian;
+		aTime = pComedy.aTime;
+		aTitle = pComedy.aTitle;
+	}
+	
+	
 	@Override
 	public int time() 
 	{
@@ -22,6 +32,11 @@ public class Comedy implements Show
 	public String description() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Show copy() {
+		return new Comedy(this);
 	}
 
 }

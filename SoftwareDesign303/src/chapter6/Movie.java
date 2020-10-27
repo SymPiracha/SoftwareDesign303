@@ -16,6 +16,7 @@ public class Movie implements Show
 		aTime = pTime;
 	}
 	
+	
 	@Override
 	public int time() 
 	{
@@ -26,6 +27,12 @@ public class Movie implements Show
 	public String description() 
 	{
 		return String.format("[%s (%d) : %d mins]", aTitle, aYear, aTime);
+	}
+
+
+	@Override
+	public Movie copy() {
+		return new Movie(this.aTitle,this.aYear,this.aTime);
 	}
 	
 

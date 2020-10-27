@@ -22,4 +22,9 @@ public class DoubleBill implements Show
 	{
 		return aMovie1.description() + " followed by " + aMovie2.description();
 	}
+
+	@Override
+	public Show copy() {
+		return new DoubleBill(aMovie1.copy(),aMovie2.copy());
+	}
 }

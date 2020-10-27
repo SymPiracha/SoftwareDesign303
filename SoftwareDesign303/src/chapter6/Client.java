@@ -11,8 +11,8 @@ public class Client
 	
 	public static void main(String[] args)
 	{
-		IntroducedShow chavezIntro = new IntroducedShow(CHAVEZ, "Ali Hassan", 5);
-		CompositeShow tuesday = new CompositeShow(chavezIntro,CARVE_UP);
+		IntroducedShow monday = new IntroducedShow(CHAVEZ, "Ali Hassan", 5);
+		CompositeShow tuesday = new CompositeShow(monday,CARVE_UP);
 		IntroducedShow wednesday = new IntroducedShow(tuesday, "Martin", 10);
 		
 	}

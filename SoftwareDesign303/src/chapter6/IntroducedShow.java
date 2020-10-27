@@ -29,4 +29,12 @@ public class IntroducedShow implements Show
 		return aShow.description() + " introduced by " + aSpeaker;
 	}
 
+
+	@Override
+	public Show copy() 
+	{
+		Show copyShow = aShow.copy();
+		return new IntroducedShow(copyShow, aSpeaker, aTime);
+	}
+
 }

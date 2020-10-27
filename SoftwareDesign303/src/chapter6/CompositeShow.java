@@ -1,6 +1,7 @@
 package chapter6;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CompositeShow implements Show
@@ -12,6 +13,11 @@ public class CompositeShow implements Show
 		aShows = Arrays.asList(pShows);
 	}
 
+	public CompositeShow(CompositeShow pCompositeShow)
+	{
+		aShows = new ArrayList<>(pCompositeShow.aShows);
+	}
+	
 	@Override
 	public int time() 
 	{
@@ -32,6 +38,16 @@ public class CompositeShow implements Show
 			description.append(show.description()).append(";");
 		}
 		return description.append("]").toString();
+	}
+
+	@Override
+	public Show copy() {
+		CompositeShow toReturn =  new CompositeShow();
+		for (Show show : aShows)
+		{
+			toReturn.aShows.add(show.copy());
+		}
+		return toReturn;
 	}
 	
 }
