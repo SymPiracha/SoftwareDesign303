@@ -9,7 +9,13 @@ public class SponsoredComedy extends Comedy
 	{	
 		super(pComedian, pTitle, pTime);
 		aSponsor = pSponsor;
-		pSponsorTime = aSponsorTime;
+		aSponsorTime = pSponsorTime;
+	}
+	
+	@Override
+	public int time()
+	{	
+		return (super.time() + aSponsorTime);
 	}
 	
 }
