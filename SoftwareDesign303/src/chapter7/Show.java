@@ -50,5 +50,4 @@ public interface Show
 	 * Returns a different but equal object
 	 * @return
 	 */
-	Show copy();
 }
