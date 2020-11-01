@@ -1,5 +1,7 @@
 package chapter7;
 
+import chapter6.Day;
+
 public class Comedy implements Show 
 {
 	private String aComedian;
@@ -45,6 +47,20 @@ public class Comedy implements Show
 	public Show copy() {
 		return new Comedy(this);
 	}
+	
+	public void setTitle(String pTitle)
+	{
+		aTitle = pTitle;
+	}
+	
+	public void setTitle(Day pDay)
+	{
+		aTitle = pDay.name().toLowerCase() + " night comedy.";
+	}
+	
+
+	
+	
 
 }
 

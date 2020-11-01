@@ -18,4 +18,9 @@ public class SponsoredComedy extends Comedy
 		return (super.time() + aSponsorTime);
 	}
 	
+	public void setTitle(Object pObject)
+	{
+		super.setTitle(pObject.toString());
+	}
+	
 }
