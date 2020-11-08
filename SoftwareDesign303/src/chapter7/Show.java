@@ -25,10 +25,6 @@ public interface Show
 			@Override
 			public boolean isNull() { return true; }
 
-			@Override
-			public Show copy() {
-				return createNull();
-			}
 		
 		};
 	}
@@ -39,6 +35,7 @@ public interface Show
 	 * @return total running time for show
 	 */
 	int time();
+	
 	/**
 	 * @return description of show to appear in program
 	 */

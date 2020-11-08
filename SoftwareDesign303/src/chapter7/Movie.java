@@ -15,12 +15,11 @@ public class Movie extends AbstractShow
 		aYear = pYear;
 	}
 	
-	
-	@Override
-	public String description() 
+	protected String extraInformation()
 	{
-		return String.format("[%s (%d) : %d mins]", title(), aYear, time());
+		return String.format("(%d)", aYear);
 	}
+
 
 }
 

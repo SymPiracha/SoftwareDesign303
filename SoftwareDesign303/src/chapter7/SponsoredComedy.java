@@ -18,5 +18,11 @@ public class SponsoredComedy extends Comedy
 		return (super.time() + aSponsorTime);
 	}
 	
+	protected String extraInformation()
+	{
+		return String.format("%s sponsored by %s", super.extraInformation(), aSponsor);
+	}
+	
+
 	
 }

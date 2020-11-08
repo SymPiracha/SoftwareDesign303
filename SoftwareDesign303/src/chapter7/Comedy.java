@@ -14,15 +14,16 @@ public class Comedy extends AbstractShow
 		
 	}
 
-	protected String Comedy()
+	protected String comedian()
 	{
 		return aComedian;
 	}
 	
+
 	@Override
-	public String description() 
+	protected String extraInformation() 
 	{
-		return String.format("[%s : %s (%d mins)]", aComedian, title(), time());
+		return String.format("by %s", aComedian);
 	}
 
 }

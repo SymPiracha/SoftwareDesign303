@@ -20,4 +20,13 @@ public abstract class AbstractShow implements Show
 	{
 		return aTime;
 	}
+	
+	protected abstract String extraInformation();
+	
+	@Override
+	public final String description() 
+	{
+		return String.format( "[%s %s %d mins]", title(), extraInformation(),  time());
+	}
+
 }
